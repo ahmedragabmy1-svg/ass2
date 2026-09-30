@@ -1,0 +1,135 @@
+====== Q1 ======
+// console.log("File:", __filename);
+// console.log("Dir:", __dirname);
+
+// ====== Q2 ======
+// const path = require("path");
+// let file = "/user/files/report.pdf";
+// console.log(path.basename(file));
+
+// ====== Q3 ======
+// const path = require("path");
+// let data = {
+//     dir: "/folder",
+//     name: "app",
+//     ext: ".js"
+// };
+// console.log(path.join(data.dir, data.name + data.ext));
+
+// ====== Q4 ======
+// const path = require("path");
+// let file2 = "/docs/readme.md";
+// console.log(path.extname(file2));
+
+// ====== Q5 ======
+// const path = require("path");
+// let file3 = "/home/app/main.js";
+// let result = path.parse(file3);
+// console.log({
+//     Name: result.name,
+//     Ext: result.ext
+// });
+
+// ====== Q6 ======
+// const path = require("path");
+// let file4 = "/home/user/file.txt";
+// console.log(path.isAbsolute(file4));
+
+// ====== Q7 ======
+// const path = require("path");
+// console.log(path.join("src", "components", "App.js"));
+
+// ====== Q8 ======
+// const path = require("path");
+// console.log(path.resolve("./index.js"));
+
+// ====== Q9 ======
+// const path = require("path");
+// console.log(path.join("/folder1", "folder2/file.txt"));
+
+// ====== Q10 ======
+// const fs = require("fs");
+// fs.unlink("./file.txt", (err) => {
+//     if (err) {
+//         console.log(err.message);
+//     } else {
+//         console.log("The file is deleted.");
+//     }
+// });
+
+// ====== Q11 ======
+// const fs = require("fs");
+// try {
+//     fs.mkdirSync("./newFolder");
+//     console.log("Success");
+// } catch (err) {
+//     console.log(err.message);
+// }
+
+// ====== Q12 ======
+// const EventEmitter = require("events");
+// const event = new EventEmitter();
+// event.on("start", () => {
+//     console.log("Welcome event triggered!");
+// });
+// event.emit("start");
+
+// ====== Q13 ======
+// const EventEmitter = require("events");
+// const event = new EventEmitter();
+// event.on("login", (username) => {
+//     console.log("User logged in:", username);
+// });
+// event.emit("login", "Ahmed");
+
+// ====== Q14 ======
+// const fs = require("fs");
+// let content = fs.readFileSync("./notes.txt", "utf8");
+// console.log(content);
+
+// ====== Q15 ======
+// const fs = require("fs");
+// fs.writeFile("./async.txt", "Async save", (err) => {
+//     if (err) {
+//         console.log(err.message);
+//     } else {
+//         console.log("File saved");
+//     }
+// });
+
+// ====== Q16 ======
+// const fs = require("fs");
+// console.log(fs.existsSync("./notes.txt"));
+
+// ====== Q17 ======
+// const os = require("os");
+// console.log({
+//     Platform: os.platform(),
+//     Arch: os.arch()
+// });
+
+// ====== Q18 ======
+// const fs = require("fs");
+// let file = fs.createReadStream("./big.txt");
+// file.on("data", (chunk) => {
+//     console.log(chunk.toString());
+// });
+
+// ====== Q19 ======
+// const fs = require("fs");
+// let source = fs.createReadStream("./source.txt");
+// let destination = fs.createWriteStream("./dest.txt");
+// source.pipe(destination);
+// destination.on("finish", () => {
+//     console.log("File copied using streams");
+// });
+
+// ====== Q20 ======
+// const fs = require("fs");
+// const zlib = require("zlib");
+// let input = fs.createReadStream("./data.txt");
+// let output = fs.createWriteStream("./data.txt.gz");
+// input.pipe(zlib.createGzip()).pipe(output);
+// output.on("finish", () => {
+//     console.log("File compressed");
+// });
